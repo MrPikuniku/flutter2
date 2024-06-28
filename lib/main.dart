@@ -87,45 +87,38 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Column(
-              
-              children: [
-                Row(children: [Icon(Icons.star), Icon(Icons.star), Icon(Icons.star), Icon(Icons.star), Icon(Icons.star), /*Spacer(),*/ Text("170 Reviews")  ]),
-              Row(children: [ Icon(Icons.kitchen), Icon(Icons.timer), Icon(Icons.restaurant) ] ), 
-            Row(children: [ Text("PREP:"), Text("COOK:"), Text("FEEDS:")] ),
-            ],
-            ), 
-            Row(), 
-            
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(
-                  Icons.local_phone,
-                  color: Colors.pink,
-                  size: 24.0,
-                  semanticLabel: 'Texte pour les modes d\'accessibilité',
-                ),
-                Icon(
-                  Icons.near_me , 
-                  color: Colors.green,
-                  size: 30.0,
-                ),
-                Icon(
-                  Icons.share ,
-                  color: Colors.blue,
-                  size: 36.0,
-                ),
-              ],), Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text("CALL"),Text("ROUTE"),Text("SHARE")
-              ],)
-          ],
-        ),
+      body: Column(
+        children: [
+          Row(children: [Column(Row() children: [Icon(Icons.star),Icon(Icons.star), Icon(Icons.star), Icon(Icons.star), Icon(Icons.star)]),Column( children:[Text("170 Reviews") ])  /*Spacer(),*/  ]),
+                      Row( children: [Column(children: [Icon(Icons.kitchen)]), Column(children: [Icon(Icons.timer)],),Column(children: [Icon(Icons.restaurant) ])     , ] ), 
+                    Row(children: [Column(children: [Text("PREP:")],), Column(children: [Text("COOK:")],), Column(children: [Text("FEEDS:")],),] ), 
+          Row(), 
+          
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Icon(
+                Icons.local_phone,
+                color: Colors.pink,
+                size: 24.0,
+                semanticLabel: 'Texte pour les modes d\'accessibilité',
+              ),
+              Icon(
+                Icons.near_me , 
+                color: Colors.green,
+                size: 30.0,
+              ),
+              Icon(
+                Icons.share ,
+                color: Colors.blue,
+                size: 36.0,
+              ),
+            ],), Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text("CALL"),Text("ROUTE"),Text("SHARE")
+            ],)
+        ],
       )
        // This trailing comma makes auto-formatting nicer for build methods.
     );
